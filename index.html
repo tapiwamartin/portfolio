@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tapiwa Martin Musariri - Portfolio</title>
+
+  <!-- Devicon for tech stack icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --secondary: #f1f3f4;
+      --text-dark: #202124;
+      --text-light: #5f6368;
+      --max-width: 900px;
+      --bg: white;
+      --text: var(--text-dark);
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #e0e0e0;
+      --secondary: #1f1f1f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .typing {
+      font-size: 2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid white;
+    }
+
+    nav {
+      background: var(--secondary);
+      padding: 0.5rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: bold;
+    }
+
+    nav button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-left: 10px;
+    }
+
+    section {
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .skill {
+      background: var(--secondary);
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.2s;
+    }
+
+    .skill:hover {
+      transform: scale(1.05);
+    }
+
+    .experience {
+      margin-top: 1.5rem;
+    }
+
+    .job {
+      margin-bottom: 1rem;
+    }
+
+    .job h3 {
+      color: var(--primary);
+    }
+
+    /* Grid Layout for Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .project-card {
+      background: var(--secondary);
+      padding: 1rem;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+
+    .project-icons {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .project-icons i {
+      font-size: 1.4rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--secondary);
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="typing" id="typing"></div>
+  </header>
+  
+  <nav>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button id="theme-toggle">Dark Mode</button>
+  </nav>
+  
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Experienced Software Developer with 6+ years in designing scalable backend solutions, 
+      building robust RESTful APIs, and creating efficient data pipelines. Skilled in Java, 
+      Spring Boot, Apache Kafka, and database-driven systems, with a proven record of 
+      integrating complex systems, automating processes, and delivering secure, high-performance solutions.
+    </p>
+  </section>
+  
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill"><i class="devicon-java-plain colored"></i>Java</div>
+      <div class="skill"><i class="devicon-spring-plain colored"></i>Spring Boot</div>
+      <div class="skill"><i class="devicon-apachekafka-original colored"></i>Apache Kafka</div>
+      <div class="skill"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</div>
+      <div class="skill"><i class="devicon-mysql-plain colored"></i>MySQL</div>
+      <div class="skill"><i class="devicon-oracle-original colored"></i>Oracle</div>
+      <div class="skill"><i class="devicon-vuejs-plain colored"></i>VueJS</div>
+      <div class="skill"><i class="devicon-docker-plain colored"></i>Docker</div>
+      <div class="skill"><i class="devicon-git-plain colored"></i>Git</div>
+      <div class="skill"><i class="devicon-tomcat-line colored"></i>Apache Tomcat</div>
+      <div class="skill"><i class="devicon-nginx-original colored"></i>Nginx</div>
+    </div>
+  </section>
+  
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience">
+      <div class="job">
+        <h3>Syntegra Solutions | Software Developer</h3>
+        <small>Jan 2023 - Present</small>
+        <p>Designed efficient data models, integrated diverse data sources, and built scalable ETL pipelines using Java, Apache Kafka, and PostgreSQL.</p>
+      </div>
+      <div class="job">
+        <h3>AFC Commercial Bank | Systems Developer</h3>
+        <small>Dec 2020 - Jan 2023</small>
+        <p>Integrated T24 core banking system with USSD, internet, and mobile banking platforms. Automated business processes to improve efficiency.</p>
+      </div>
+      <div class="job">
+        <h3>Bindura University of Science Education | Software Developer</h3>
+        <small>Jan 2019 - Dec 2020</small>
+        <p>Developed new modules using Spring Boot, VueJS, and PostgreSQL. Built REST and SOAP APIs for payment gateway integration.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Internet Banking System</h3>
+        <p>Enabled 20k+ users to perform real-time transactions with the Core Banking System.</p>
+        <div class="project-icons">
+          <i class="devicon-java-plain colored"></i>
+          <i class="devicon-spring-plain colored"></i>
+          <i class="devicon-postgresql-plain colored"></i>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>University Management System</h3>
+        <p>Managed student and lecturer interactions, including enrollment, timetabling, payments, and e-voting.</p>
+        <div class="project-icons">
+          <i class="devicon-vuejs-plain colored"></i>
+          <i class="devicon-spring-plain colored"></i>
+          <i class="devicon-postgresql-plain colored"></i>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Financial Reporting Module</h3>
+        <p>Used by 50+ companies to generate financial statements.</p>
+        <div class="project-icons">
+          <i class="devicon-java-plain colored"></i>
+          <i class="devicon-postgresql-plain colored"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:musaririmartin@gmail.com">musaririmartin@gmail.com</a></p>
+    <p>Phone: +263-771-184-735</p>
+    <p>GitHub: <a href="https://github.com/" target="_blank">github.com/</a></p>
+  </section>
+  
+  <footer>
+    &copy; 2025 Tapiwa Martin Musariri. All Rights Reserved.
+  </footer>
+
+  <script>
+    // Typing animation with greeting and profession
+    const textArray = ["Hi, I'm Tapiwa Martin Musariri", "I'm a Software Developer"];
+    const typingElement = document.getElementById("typing");
+    let textIndex = 0;
+    let charIndex = 0;
+    let currentText = "";
+    let isDeleting = false;
+
+    function type() {
+      currentText = textArray[textIndex];
+      if (!isDeleting) {
+        typingElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === currentText.length) {
+          isDeleting = true;
+          setTimeout(type, 1500);
+          return;
+        }
+      } else {
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          isDeleting = false;
+          textIndex = (textIndex + 1) % textArray.length;
+        }
+      }
+      setTimeout(type, isDeleting ? 50 : 100);
+    }
+    type();
+
+    // Dark mode toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+      document.body.dataset.theme = document.body.dataset.theme === 'dark' ? '' : 'dark';
+      themeBtn.textContent = document.body.dataset.theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    });
+  </script>
+</body>
+</html>
